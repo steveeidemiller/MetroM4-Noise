@@ -2,7 +2,6 @@ language: c
 before_install:
   - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
 install:
-  - ln -s $PWD /usr/local/share/arduino/libraries/MetroM4-Noise
   - arduino --install-library "Adafruit Zero I2S Library"
 script:
   - arduino --verify --board arduino:samd:m4 $PWD/MetroM4-Noise.ino
