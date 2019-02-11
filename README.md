@@ -16,3 +16,6 @@ This is a high-quality noise generation project featuring CD quality audio in fu
 The volume pot is ONLY read during startup!! Changing the pot during noise playback will have no effect. This was necesary because the noise generation algorithms seem to use most of the CPU bandwidth, and the analogRead() function takes quite a few compute cycles as well. Also, any attempt to use analogRead() at various intervals causes noticeable audio artifacts. Therefore, the current design decision is to simply read volume one time during startup. If you need to change volume, simply touch the reset button. While less than ideal, this ensures continuous high-quality audio without any artifacts. The noise type is also hard-coded for similar reasons.
 
 To use demo mode, simply uncomment the `#define DEMO;` line. This will continuously loop through all available noise types, printing the name of each one in the serial monitor. Demo mode is useful for selecting the type of noise you prefer as well as selecting an appropriate listening volume.
+
+## Wiring Diagram
+![Wiring Diagram](/Fritzing/WiringDiagram.png?raw=true)
